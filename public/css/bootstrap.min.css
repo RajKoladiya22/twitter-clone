@@ -230,7 +230,7 @@ h6 {
     margin-top: 0;
     margin-bottom: .5rem;
     font-weight: 500;
-    line-height: 1.2;
+    /* line-height: 1.2; raj_edit */
     color: var(--bs-heading-color)
 }
 
@@ -865,8 +865,8 @@ progress {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
+    /* padding-right: calc(var(--bs-gutter-x) * .5); */
+    /* padding-left: calc(var(--bs-gutter-x) * .5); */
     margin-top: var(--bs-gutter-y)
 }
 

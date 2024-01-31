@@ -22,8 +22,8 @@
 <body>
     <section>
         <div class="container">
-            <div class="row">
-                <div class="col-xxl-2">
+            <div class="d-flex">
+                <div class="col-lg-3 nav-section px-5">
                     <div class="py-2">
                         <div class="x-logo">
                             <img src="/public/img/twitter_logo.png" alt="" class="img-fluid">
@@ -31,57 +31,180 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="/home" class="d-flex"><i class="ri-home-5-fill"></i> <h3>Home</h3> </a></li>
-                            <li><a href="/home" class="d-flex"><i class="ri-search-line"></i> <h3>Explore</h3> </a></li>
-                            <li><a href="/home" class="d-flex"><i class="ri-notification-2-line"></i> <h3>Notification</h3> </a></li>
-                            <li><a href="/home" class="d-flex"><i class="ri-mail-line"></i> <h3>Message</h3> </a></li>
-                            <li><a href="/home" class="d-flex"><i class="far fa-minus-square"></i> <h3>Grok</h3> </a></li>
-                            <li><a href="/home" class="d-flex"><i class="ri-more-line"></i> <h3>More</h3> </a></li>
+                            <li><a href="/home"><i class="ri-home-5-fill"></i>
+                                    <h3>Home</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="ri-search-line"></i>
+                                    <h3>Explore</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="ri-notification-2-line"></i>
+                                    <h3>Notification</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="ri-mail-line"></i>
+                                    <h3>Message</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="far fa-minus-square"></i>
+                                    <h3>Grok</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="ri-file-list-line"></i>
+                                    <h3>Lists</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="ri-bookmark-line"></i>
+                                    <h3>Bookmark</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="fas fa-user-friends"></i>
+                                    <h3>Comunities</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="ri-xing-fill"></i>
+                                    <h3>Premiun</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="far fa-user"></i>
+                                    <h3>Profile</h3>
+                                </a></li>
+                            <li><a href="/home"><i class="ri-more-line"></i>
+                                    <h3>More</h3>
+                                </a></li>
+                        </ul>
+                        <button><a href="/home">Post</a></button>
+
+                        <div class="togollor" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="usres-box d-flex justify-content-between align-items-center">
+                                <div class="user-profile d-flex align-items-center">
+                                    <% if (currentUser) { %>
+                                    <div class="user-img">
+                                        <img src="<%= currentUser.profile %>" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="user-detalis">
+                                            <h4><%= currentUser.name %></h4>
+                                            <span>@<%= currentUser.username %></span>
+                                        
+                                    <% } else { %>
+                                        <!-- Handle the case when the user is not logged in -->
+                                        <p>User not logged in</p>
+                                    <% } %>
+                                </div>
+                                </div>
+                                <div class="more-icon">
+                                    <i class="ri-more-line"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="/logout">Logout</a></li>   
                         </ul>
                     </nav>
                 </div>
-                <div class="col-xxl-10 d-flex">
-                    <div class="col-xxl-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum similique
-                        praesentium nesciunt eaque blanditiis libero. Placeat nulla tenetur natus expedita nesciunt
-                        accusamus eligendi minus enim, magni quo hic rerum tempore, aliquam maiores reprehenderit.
-                        Deleniti doloribus odio vel aspernatur eveniet! Nulla explicabo odit consectetur omnis tenetur.
-                        Minima praesentium id eius, dolorum voluptatem, repellendus nostrum nobis animi odit dolores
-                        adipisci distinctio at expedita, est aperiam accusamus harum illum impedit quae similique
-                        aliquid! Quibusdam vitae illo saepe? Molestias voluptates magni, recusandae amet illo cumque
-                        maiores fuga reprehenderit explicabo itaque minima veniam excepturi voluptatem? Corrupti ratione
-                        officia ab culpa magni odit, fugiat cupiditate numquam iure? Eius totam accusamus, quam
-                        doloribus vitae soluta non consectetur placeat aspernatur vel ad nisi perferendis quo impedit
-                        consequatur. Adipisci, dicta doloribus quos maiores quod obcaecati dolorum soluta aut, mollitia
-                        aliquid sed, nisi aperiam numquam molestias laboriosam officia doloremque veniam nulla!
-                        Voluptate qui eos deserunt et, odit architecto vitae quisquam magnam voluptas aspernatur
-                        inventore dicta consequatur odio! Dolorem earum fugit nihil sint cupiditate rerum suscipit totam
-                        odio autem facere rem quis repudiandae assumenda cum, ipsa eveniet blanditiis temporibus
-                        perferendis maxime deserunt tempore? Velit ipsa, dolore atque, ad ut qui sint, corporis aliquid
-                        error veritatis rem deleniti. Atque veritatis maiores necessitatibus nulla unde ex dicta
-                        voluptatem incidunt possimus, optio ratione ut eius cum eos vel itaque ipsam excepturi placeat
-                        fugiat! Dignissimos numquam placeat possimus corrupti expedita ex nulla earum ipsa assumenda
-                        maiores modi repellat, nam commodi illo et esse voluptatibus iste maxime distinctio, facilis cum
-                        necessitatibus odio! Mollitia autem quibusdam aperiam fugiat architecto, voluptatem
-                        exercitationem? Excepturi, aspernatur in! Tenetur, animi repudiandae at labore itaque, error
-                        harum quisquam est quis quo omnis quod, cupiditate ipsa ut odit magnam delectus odio vitae?
-                        Laborum id ex temporibus eveniet libero ea. Cupiditate, vitae deleniti doloremque quis
-                        reiciendis doloribus nam esse voluptates quod voluptatibus. Eos, excepturi?</div>
-                    <div class="col-xxl-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, nam ea
-                        cumque reiciendis labore nulla aspernatur explicabo nihil iste sed at! Eius, ipsum esse. Ipsam
-                        officiis recusandae laudantium voluptatibus quibusdam. Quaerat fugit quod, voluptatem unde ipsa
-                        dolorum quia quisquam laborum placeat repellendus! Cum ipsam repellendus laboriosam id ducimus.
-                        Corrupti quasi nostrum vel fuga quaerat eligendi et quas harum esse est dicta quo, itaque
-                        voluptatum debitis sed, consequuntur hic sint. Animi ab sequi nobis voluptas tenetur molestiae
-                        beatae dignissimos, est soluta minima labore totam maxime nulla, neque velit dolorem repellendus
-                        numquam quaerat deserunt distinctio sed a. Adipisci qui, similique architecto id ab laudantium
-                        nemo laboriosam quos velit ut cumque iure error optio fugiat numquam eos totam dolores nostrum
-                        officiis debitis ipsam aliquam natus facilis vero. Explicabo vitae adipisci placeat eveniet?
-                        Tempore asperiores dolorem obcaecati accusantium commodi ex expedita, velit autem hic cum cumque
-                        unde delectus sed provident minima facere. Porro, incidunt doloremque! Ullam dolorum consectetur
-                        velit. Autem cupiditate quam quis minima at veritatis perspiciatis. Voluptatem atque beatae
-                        consequuntur, officiis at velit quia eveniet sapiente maiores culpa? Blanditiis nobis neque ut?
-                        Quam vero fugiat iusto maxime nisi eius neque, dolorem omnis quia fugit quae possimus labore
-                        quis explicabo nobis. Non, tempore. Vero!</div>
+                
+                <div class="col-lg-5 content">
+                    <div class="all_random_post">
+                        <div class="post_section_header content-head">
+                            <div class="f_15_18_500 d-flex py-3 text-center white_color">
+                                <div class="col-lg-5"><span class="post_section_header_active py-3 position-relative">For you</span></div>
+                                <div class="col-lg-5"><span class="py-3 position-relative">Following</span></div>
+                                <div class="col-lg-2"><span class="py-3 position-relative"><i class="ri-settings-3-line"></i></span></div>
+                            </div>
+                        </div>
+                        <div class="upload_post">
+                            <form action="/addTweet" method="post" enctype="multipart/form-data">
+                                <div class="d-flex py-3 align-items-center">
+                                    <input type="hidden" name="userid" value="<%= currentUser.id %>">
+                                    <div class="col-lg-12 ps-3 d-flex" style="border-bottom: 1px solid #71767b;">
+                                        <div class="col-lg-1">
+                                           
+                                            <div class="user-img">
+                                                <img src="<%= currentUser.profile  %>" alt="" >
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-11 " style="padding-left: 10px;">
+                                            <div class="pb-3" >
+                                                <!-- <input type="text" name="post_content" class="post_content f_20_28_600" placeholder="What is happening?!"> -->
+                                                <textarea name="post_content" class="post_content f_20_28_600" placeholder="What is happening?!" maxlength="280" oninput="checkButtonState()"></textarea>
+                                                <span id="selectedImagesContainer" style="width: 60px; height: 60px;"></span>
+                                                <span class="d-block pt-3"><i class="fas fa-globe-americas"></i> Everyone can reply</span>
+                                            </div>
+                                            <div class="p-2 d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <label for="post_imgs" class="blue_color post_imgs_label"><i class="ri-image-2-line"></i></label>
+                                                    <input type="file" accept="image/*" name="post_imgs" id="post_imgs" class="d-none" onchange="checkButtonState()" multiple>
+                                                </div>
+                                                <div>
+                                                    <button type="submit" class="btn btn-primary" id="postButton">Post</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div>
+                        <% allTweet.map((val) => { %>
+                            
+                        <div class="teewt-post">
+                            <div class="tweet-post-user d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center ">
+                                    <div class="user-img">
+                                        <img src="<%= currentUser.profile %>" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-flex t-p-u">
+                                        <h6><%= currentUser.name %> &nbsp;</h6>
+                                        <span><%=  currentUser.username%> &nbsp;</span>
+                                    <%= //new Date(val.post_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' , time : 'numeric' }) %> 
+                                    <%
+                                    const postDate = new Date(val.post_date);
+                                    const currentDate = new Date();
+            
+                                    
+                                    const timeDifferenceInHours = Math.floor((currentDate - postDate) / (1000 * 60 * 60));
+            
+                                    let displayDate;
+            
+                                    if (timeDifferenceInHours < 24) {
+                                        displayDate = `${timeDifferenceInHours}h`;
+                                    } else {
+                                        const options = { month: 'short', day: 'numeric', hour: 'numeric' };
+                                        displayDate = postDate.toLocaleDateString('en-US', options);
+                                    } %>
+                                    <span><%= displayDate %></span> 
+                                    </div>
+                                </div>
+                                <i class="ri-more-line"></i>
+                        
+                            </div>
+                            
+                            <div class="tweet-post-content">
+                                <p><%= val.post_content %></p>
+                                <div class="tweet-img">
+                                    <img src="<%= val.post_imgs %>" alt="">
+                                </div>
+                                <div class="tweet-post-action">
+                                    <ul class="d-flex justify-content-between">
+                                        <li>
+                                                <i class="ri-chat-1-line"></i>
+                                        </li>
+                                        <li>
+                                                <i class="fa-solid fa-right-left"></i>
+                                        </li>
+                                        <li>
+                                                <i class="ri-heart-line"></i>
+                                        </li>
+                                        <li>
+                                                <i class="ri-bar-chart-line"></i>
+                                        </li>
+                                        <li>
+                                                <i class="ri-bookmark-line"></i>
+                                                <i class="ri-upload-2-line"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+    
+                        <%  }) %>   
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

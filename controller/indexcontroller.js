@@ -10,17 +10,19 @@ const indexpage = async (req, res) => {
 
 const addUser = async (req, res) => {
   try {
-    const { name, email, phone, password, c_password } = req.body;
+    let usercode = Math.floor(Math.random() * 100);
+    const { name, email, phone, password, } = req.body;
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     let Add = await SignupModel.create({
       name,
       email,
       phone,
       password: hashedPassword,
-      c_password: hashedPassword,
+      username: `${name}@${usercode}`,
+      profile: req.file.path,
     });
     if (Add) {
-      console.log(`User Registred`);
+      console.log(`User Registered`);
       return res.redirect("/");
     }
   } catch (err) {
@@ -29,7 +31,20 @@ const addUser = async (req, res) => {
   }
 };
 
+
+const logOut = (req, res) => {
+  req.logout((err) => {
+      if (err) {
+          console.log(err);
+          return false;
+      }
+      return res.redirect('/');
+  });
+};
+
+
 module.exports = {
   indexpage,
   addUser,
+  logOut,
 };

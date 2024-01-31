@@ -24,8 +24,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setUser);
 
+app.use((req, res, next) => {
+    res.locals.currentUser = req.user; 
+    next();
+});
+
 app.use('/public',express.static(path.join(__dirname,'public')));
 
+app.use('/uploads',express.static(path.join(__dirname,'uploads')));
 app.use('/',require('./routes/homeroutes'));
 app.use('/',require('./routes/indexroutes'));
 

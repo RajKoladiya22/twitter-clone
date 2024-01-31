@@ -17,6 +17,10 @@ const SignupModel = mongoose.Schema({
         type : String,
         require : true
     },
+    profile : {
+        type : String,
+        require : true
+    },
     password : {
         type : String,
         require : true
@@ -24,6 +28,11 @@ const SignupModel = mongoose.Schema({
     c_password : {
         type : String,
         require : true
+    },
+    username: {
+        type: String,
+        required: true,
+        unique: true,
     },
 })
 
