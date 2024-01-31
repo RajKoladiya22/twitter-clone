@@ -5,8 +5,7 @@ const SignupModel = require('../model/signupmodel')
 const HomePage = async(req, res)=>{
     try{
         let allTweet = await TweetModel.find({userId : res.locals.users._id}).populate("userId");
-        let UserDetalis = await SignupModel.find({})
-        console.log(allTweet);
+        let UserDetalis = await SignupModel.find({});
         return res.render('home', { allTweet, UserDetalis });
     }catch(err){
         console.log(err);
