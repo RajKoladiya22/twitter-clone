@@ -89,13 +89,23 @@
                                                         <h3 class="white_color">Create your account</h3>
                                                     </div>
                                                     <div>
-                                                        <div class="position-relative my-4">
-                                                            <input type="text" name="name" id="name"
-                                                                class="white_color w-100" maxlength="50"
-                                                                oninput="countCharacters()">
-                                                            <div class="input_letter" id="character-counter">0 / 50
+                                                        <div class="d-flex">
+                                                            <div class="w-50 position-relative my-4">
+                                                                <input type="text" name="f_name" id="name"
+                                                                    class="white_color w-100" maxlength="25"
+                                                                    oninput="countCharacters()">
+                                                                <div class="input_letter" id="character-counter">0 / 25
+                                                                </div>
+                                                                <span class="input_name">First Name</span>
                                                             </div>
-                                                            <span class="input_name">Name</span>
+                                                            <div class="w-50 position-relative my-4">
+                                                                <input type="text" name="l_name" id="name"
+                                                                    class="white_color w-100" maxlength="25"
+                                                                    oninput="countCharacters()">
+                                                                <div class="input_letter" id="character-counter">0 / 25
+                                                                </div>
+                                                                <span class="input_name">Last Name</span>
+                                                            </div>
                                                         </div>
                                                         <div class="position-relative my-4">
                                                             <input type="tel" name="email" id="email"
@@ -110,7 +120,7 @@
                                                         <div class="position-relative my-4">
                                                             <input type="file" name="profile" id="profile"
                                                                 class="white_color w-100" required style="display:none" >
-                                                           <label for="profile"><i class="ri-upload-2-line"></i>Profile Photo</label>
+                                                           <label for="profile"> <span class="input_name"><i class="ri-upload-2-line"></i>Profile Photo</label>
                                                         </div>
                                                         <!-- <div class="position-relative my-4">
                                                     <input type="date" name="dob" id="dob">

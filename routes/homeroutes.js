@@ -21,5 +21,8 @@ const FileUpload = multer({
 routes.get('/home',passport.chekUser,homecontroller.HomePage);
 routes.post('/loginUser',passport.authenticate('local',{failureRedirect : '/'}),homecontroller.loginUser);
 routes.post('/addTweet',FileUpload,homecontroller.addTweet);
+routes.get('/DeleteTweet',homecontroller.DeleteTweet);
+routes.get('/EditTweet',passport.chekUser,homecontroller.EditTweet);
+routes.post('/UpdateTweet',FileUpload, homecontroller.UpdateTweet);
 
 module.exports=routes;

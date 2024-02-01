@@ -441,3 +441,12 @@ nav button a{
             border-radius: 20px;
         }
   }
+  .teewt-post{
+    .dropdown-menu{
+        li {
+            a{
+                font-weight: 600;
+            }
+        }
+    }
+  }

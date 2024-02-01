@@ -11,15 +11,16 @@ const indexpage = async (req, res) => {
 const addUser = async (req, res) => {
   try {
     let usercode = Math.floor(Math.random() * 100);
-    const { name, email, phone, password, } = req.body;
+    const {name, f_name, l_name, email, phone, password } = req.body;
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     let Add = await SignupModel.create({
-      name,
+      f_name,l_name,
+      name : `${f_name} ${l_name}`,
       email,
       phone,
-      password: hashedPassword,
-      username: `${name}@${usercode}`,
       profile: req.file.path,
+      password: hashedPassword,
+      username: `${f_name}@${usercode}`,
     });
     if (Add) {
       console.log(`User Registered`);
